@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static class MyPagerAdapter extends FragmentPagerAdapter {
         private static final int NUM_ITEMS = 3;
 
-        public MyPagerAdapter(FragmentManager fm) {
+        MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return NewsFragment.newInstance(1, "Hello World");
+                    return ArticleFragment.newInstance(1);
                 case 1:
                     return NewsFragment.newInstance(2, "Hello Universe");
                 case 2:
